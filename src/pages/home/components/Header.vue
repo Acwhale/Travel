@@ -22,16 +22,16 @@ export default {
 @import '~@/assets/style/varibles.styl';
     .header-container{
 				width 100%;
-        display  flex
-        flex-direction : row
-        align-items center
-        line-height  .86rem;
+        		display  flex
+        		flex-direction : row
+        		align-items center
+        		line-height  .86rem
 				justify-content  space-between
 				background $bgColor
 				color :#fff
     }
 		.header-left{
-				margin-left .1rem;
+				margin-left .1rem
 		}
 		.header-input{
 			flex 1
