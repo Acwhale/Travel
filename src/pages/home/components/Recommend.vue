@@ -1,0 +1,88 @@
+<template>
+    <div>
+        <div class="recommend-title">热销推荐</div>
+        <ul>
+            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+                <div class="itme-img-wrapper">
+                    <img class='item-img' :src="item.imgUrl"/>
+                </div>
+                <div class="item-info">
+                    <p class="item-title">{{item.title}}</p>
+                    <p class="item-desc">{{item.desc}}</p>
+                    <button class="item-button">查看详情</button>
+                </div>
+            </li>    
+        </ul>  
+    </div>
+</template>
+<script>
+export default {
+    name:"HomeRecommend",
+    data(){
+        return{
+            recommendList:[
+                {
+                    id:"001",
+                    imgUrl:"http://img1.qunarzz.com/sight/p0/1601/7d/7d5ba85cdaeee83a90.img.jpg_200x200_233cac4a.jpg",
+                    title:"台骀山滑世界",
+                    desc:"台骀山滑世界"
+                },
+                {
+                    id:"002",
+                    imgUrl:"http://img1.qunarzz.com/sight/p0/1601/7d/7d5ba85cdaeee83a90.img.jpg_200x200_233cac4a.jpg",
+                    title:"台骀山滑世界",
+                    desc:"台骀山滑世界"
+                },
+                {
+                    id:"003",
+                    imgUrl:"http://img1.qunarzz.com/sight/p0/1601/7d/7d5ba85cdaeee83a90.img.jpg_200x200_233cac4a.jpg",
+                    title:"台骀山滑世界",
+                    desc:"台骀山滑世界"
+                }
+            ]
+        }
+    }
+}
+</script>
+<style lang="stylus" scoped>
+@import '~@/assets/style/mixins.styl';
+    .recommend-title{
+        margin-top .2rem
+        line-height .8rem
+        background #eeeeee
+        text-indent .2rem
+    }
+    .item{
+        height 1.9rem
+        overflow hidden
+        display flex
+        flex-direction  row
+    }
+    .item-img{
+        width 1.7rem
+        height 1.7rem
+        padding .1rem
+    }
+    .item-info{
+        flex  1
+        padding .1rem
+        min-width 0
+    }
+    .item-title{
+        line-height .54rem
+        font-size .32rem
+        ellipsis()
+    }
+    .item-desc{
+        line-height .4rem
+        color #ccc
+    }
+    .item-button{
+        line-height .44rem
+        background #ff9300
+        border-radius .006rem
+        margin-top .16rem
+        padding 0 .2rem
+        color fff
+    }
+</style>

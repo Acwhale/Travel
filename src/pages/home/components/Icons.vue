@@ -95,6 +95,7 @@ export default {
     padding-bottom: 50%;
 }  
 .icons {
+    margin-top .1rem
     width: 100%;
     height: 0;
     padding-bottom: 50%;
@@ -126,12 +127,12 @@ export default {
 }
 
 .icon-desc {
-    position: absolute;
+    position:relative;
     left: 0;
     right: 0;
     bottom: 0;
     height: 0.44rem;
-    line-height: 0.9rem;
+    line-height: .6rem;
     text-align: center;
     color: $darkTextColor;
    ellipsis()
