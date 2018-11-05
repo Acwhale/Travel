@@ -13,28 +13,11 @@
 <script>
 export default {
     name:"HomeWeekend",
+    props:{
+        c:Array
+    },
     data(){
         return{
-            weekendList:[
-                {
-                    id:'001',
-                    imgUrl:"http://img1.qunarzz.com/sight/source/1509/d4/fc8b971f328b79.jpg_r_640x214_d161f3ff.jpg",
-                    title:"太原周边赏秋",
-                    desc:"秋风送爽，赏秋图绘制美丽新太原"
-                },
-                {
-                    id:'003',
-                    imgUrl:"http://img1.qunarzz.com/sight/source/1509/d4/fc8b971f328b79.jpg_r_640x214_d161f3ff.jpg",
-                    title:"太原周边赏秋",
-                    desc:"秋风送爽，赏秋图绘制美丽新太原"
-                },
-                {
-                    id:'002',
-                    imgUrl:"http://img1.qunarzz.com/sight/source/1509/d4/fc8b971f328b79.jpg_r_640x214_d161f3ff.jpg",
-                    title:"太原周边赏秋",
-                    desc:"秋风送爽，赏秋图绘制美丽新太原"
-                }
-            ]
         }
     }
 }

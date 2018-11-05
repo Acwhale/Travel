@@ -16,58 +16,14 @@
 <script>
 export default {
   name: "HomeIcons",
+  props:{
+      iconList:Array
+  },
   data() {
     return {
       swiperOption: {
         //   loop:true
       },
-      iconList:[
-          {
-              id:'001',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-              desc:'景点门票'
-          },
-          {
-              id:'002',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-              desc:'名胜古迹'
-          },
-          {
-              id:'003',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-              desc:'一日游'
-          },
-          {
-              id:'004',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-              desc:'必游榜单'
-          },
-          {
-              id:'005',
-              imgUrl:'https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-              desc:'打卡圣地'
-          },
-          {
-              id:'006',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-              desc:'平遥古城'
-          },
-          {
-              id:'007',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
-              desc:'五台山'
-          },
-          {
-              id:'008',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/c1/6f15f887179fa002.png',
-              desc:'王家大院'
-          },
-          {
-              id:'009',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/c1/6f15f887179fa002.png',
-              desc:'乔家大院'
-          }
-      ]
     };
   },
   computed: {

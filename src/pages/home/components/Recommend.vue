@@ -18,28 +18,11 @@
 <script>
 export default {
     name:"HomeRecommend",
+    props:{
+        recommendList:Array
+    },
     data(){
         return{
-            recommendList:[
-                {
-                    id:"001",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1601/7d/7d5ba85cdaeee83a90.img.jpg_200x200_233cac4a.jpg",
-                    title:"台骀山滑世界",
-                    desc:"台骀山滑世界"
-                },
-                {
-                    id:"002",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1601/7d/7d5ba85cdaeee83a90.img.jpg_200x200_233cac4a.jpg",
-                    title:"台骀山滑世界",
-                    desc:"台骀山滑世界"
-                },
-                {
-                    id:"003",
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1601/7d/7d5ba85cdaeee83a90.img.jpg_200x200_233cac4a.jpg",
-                    title:"台骀山滑世界",
-                    desc:"台骀山滑世界"
-                }
-            ]
         }
     }
 }

@@ -17,6 +17,9 @@
 <script>
 export default {
     name:'HomeSwiper',
+    props:{
+        swiperList:Array,
+    },
     data(){
         return{
             swiperOption:{
@@ -25,14 +28,6 @@ export default {
                 },
                 loop:true
             },
-            swiperList:[{
-                id:"001",
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1702/35/27a69684a8301002.jpg_750x200_c949e874.jpg"
-            },
-            {
-                id:"002",
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1609/91/349baffdc0e03402.jpg_750x200_728835bd.jpg"
-            }]
         }
     }
 }
@@ -45,7 +40,7 @@ export default {
         overflow hidden
         width 100%
         height 0
-        padding-bottom 26.5%
+        padding-bottom 28.5%
     }
     .swiper-image{
         width 100%
