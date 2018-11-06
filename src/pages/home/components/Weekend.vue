@@ -14,7 +14,7 @@
 export default {
     name:"HomeWeekend",
     props:{
-        c:Array
+        weekendList:Array
     },
     data(){
         return{
