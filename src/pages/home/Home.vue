@@ -1,6 +1,6 @@
 <template>
   <div>
-		<home-header :city="city"></home-header>
+		<home-header></home-header>
 		<home-swiper :swiperList="swiperList"></home-swiper>
 		<home-icons  :iconList="iconList"></home-icons>
 		<home-recommend :recommendList="recommendList"></home-recommend>
@@ -26,24 +26,23 @@ export default {
   },
   data(){
 	 return {
-		  city:"",
-		  swiperList:[],
-		  iconList:[],
-		  recommendList:[],
-		  weekendList:[]
+		swiperList:[],
+		iconList:[],
+		recommendList:[],
+		weekendList:[],
+		lastCity :'',
 	 }
   },
   methods:{
 	  //获取主页数据信息
 	  getHomeInfo(){
-		  axios.get('/api/index.json')
+		  axios.get('/api/index.json?city='+ this.$store.state.city)
 		  	.then(this.getHomeInfoSucc)
 	  },
 	  getHomeInfoSucc(res){
 		 console.log(res)
 		 res = res.data
 		 if(res.ret && res.data){
-			this.city = res.data.city
 			this.swiperList = res.data.swiperList
 			this.iconList = res.data.iconList
 			this.recommendList = res.data.recommendList
@@ -52,7 +51,15 @@ export default {
 	  }
   },
   mounted(){
+	  this.lastCity = this.$store.state.city
 	  this.getHomeInfo()
+  },
+  activated(){
+	// console.log(this.$store.state.city);
+	if(this.lastCity !== this.$store.state.city){
+		this.lastCity = this.$store.state.city
+		this.getHomeInfo()
+	}
   }
 }
 </script>

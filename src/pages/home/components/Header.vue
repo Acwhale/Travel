@@ -1,16 +1,17 @@
 <template>
     <div class="header-container">
         <div class="header-left">
-					<div class="iconfont back-icon">&#xe611;</div>
-				</div>
+			<div class="iconfont back-icon">&#xe611;</div>
+		</div>
         <div class="header-input">
-					<span class="iconfont">&#xe603;</span>
-					 输入城市/景点/游玩主题</div>
+			<span class="iconfont">&#xe603;</span>
+					 输入城市/景点/游玩主题
+		</div>
         <router-link to="/city">
 			<div class="header-right">
-					{{this.city}}
-					<span class="iconfont arrow-left">&#xe656;</span>
-				</div>
+				{{this.$store.state.city}}
+				<span class="iconfont arrow-left">&#xe656;</span>
+			</div>
 		</router-link>
     </div>
 </template>
